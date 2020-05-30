@@ -52,10 +52,13 @@ class UI {
         console.log(div.className);
         
         div.appendChild(document.createTextNode(message));
-        const container = document.getElementsByClassName('container');
-        const table = document.getElementsByClassName('table')
-        const form = document.getElementById('book-form');
-        form.insertBefore(div, table);
+        // const container = document.getElementsByClassName('container')
+        // const table = document.getElementsByClassName('table')
+        // const form = document.getElementById('book-form');
+
+        const container = document.querySelector('.container');
+        const form = document.querySelector('#book-form');
+        container.insertBefore(div, form);
         // make vanish in 3 seconds
         setTimeout(() => document.querySelector('.alert').remove(), 3000)  
       }
@@ -68,7 +71,7 @@ class UI {
 }
 
 
-//storeclass : storage is handles
+//storeclass : storage is handled
 class Store{
     static getBooks(){ 
         let books ;
