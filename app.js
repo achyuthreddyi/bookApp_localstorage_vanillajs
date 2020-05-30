@@ -6,8 +6,6 @@ class Book {
         this.isbn = isbn;
     }
 }
-
-
 //ui class : handle tasks
 class UI {
     static displaybooks(){
