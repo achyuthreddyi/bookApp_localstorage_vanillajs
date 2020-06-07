@@ -3,51 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
     <script src="https://kit.fontawesome.com/945f07c30c.js" crossorigin="anonymous"></script>
-    <title>Mybooklist App</title>
+
+    <title>booklist</title>
 </head>
 <body>
+  <div class="container mt-4">
+      <header>
+      <h1 class="display-4 text-center"> 
+          <i class="fas fa-book-open text-primary"></i> My <span class="text-primary">Booklist</span></h1>
+      </header>
+      <!-- //comes here -->
+
+      <form  id="book-form"> 
+        <div> 
+          <label for="title">title</label>
+          <input type="text"  id="title" class="form-control">
+        </div>
+
+        <div> 
+            <label for="author">author</label>
+            <input type="text"  id="author" class="form-control">
+        </div>
+
+        <div> 
+            <label for="isbn">isbn</label>
+            <input type="text"  id="isbn" class="form-control">
+        </div>
+
+        <input type="submit" value="add book" class="btn btn-primary btn-block mt-2">
     
-    <div class="container mt-4" id="div123">
-        <h1 class="display-4 text-center">  <i class = "fas fa-check-circle text-primary"></i>my  <span class="text-justify">Booklist </span> </h1>
 
-         <!-- comes here -->
-        <form id="book-form">
-            <div class="form-group">
-                <label for = "title" > Title</label>
-                <input type="text" id = "title" class = "form-control" placeholder="enter the title of the book">
+      </form>
 
-            </div>
-            <div class="form-group">
-                <label for = "title"> author</label>
-                <input type="text" id = "author" class = "form-control" placeholder="enter the author of the book">
+      <table class="table table-striped mt-5">
+          <thead>
+              <tr>
+                  <th>title</th>
+                  <th>author</th>
+                  <th>isbn</th>
+                  <th>delete</th>
+                  <th>edit</th>
+              </tr>
+          </thead>
 
-            </div>
-            <div class="form-group">
-                <label for = "title"> isbn</label>
-                <input type="text" id = "isbn" class = "form-control"
-                placeholder="enter teh isbn of the book">
+          <tbody id="book-list"></tbody>
 
-            </div>
-            <input type="submit" value = "add-book" class="btn btn-primary btn-block">
+      </table>
 
-        </form>
-        <table class="table table-striped mt-5">
-            <thead>
-                <tr>
-                    <th>title</th>
-                    <th>author</th>
-                    <th>isbn</th>
-                    
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="book-list"></tbody>
-        </table>
-
-    </div>
-    <script src="app.js"></script>
-    
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
